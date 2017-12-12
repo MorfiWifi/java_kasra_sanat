@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5023c4c-fc22-4baa-a8ba-d92282d251e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/network/LoginService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utility/AuthenticationInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utility/ServiceGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utility/TextUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/UserModel.java" afterPath="$PROJECT_DIR$/src/models/UserModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/network/FakeDataService.java" afterPath="$PROJECT_DIR$/src/network/FakeDataService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -735,7 +728,7 @@
       <option name="presentableId" value="Default" />
       <updated>1513004236246</updated>
       <workItem from="1513004239085" duration="9067000" />
-      <workItem from="1513106030609" duration="1991000" />
+      <workItem from="1513106030609" duration="2030000" />
     </task>
     <task id="LOCAL-00001" summary="-first not Fully Fixed">
       <created>1513007704665</created>
@@ -758,14 +751,21 @@
       <option name="project" value="LOCAL" />
       <updated>1513017255933</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="-FOurth added Classes for Using Token">
+      <created>1513108058183</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1513108058183</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11058000" />
+    <option name="totallyTimeSpent" value="11097000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="972" height="1047" extended-state="0" />
+    <frame x="953" y="0" width="972" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -809,7 +809,8 @@
     <MESSAGE value="-first not Fully Fixed" />
     <MESSAGE value="-Second Nearly No Class BUG!" />
     <MESSAGE value="-Third Working List Of Calls" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Third Working List Of Calls" />
+    <MESSAGE value="-FOurth added Classes for Using Token" />
+    <option name="LAST_COMMIT_MESSAGE" value="-FOurth added Classes for Using Token" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
