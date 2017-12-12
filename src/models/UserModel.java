@@ -13,4 +13,7 @@ public class UserModel {
     public int OverTime;
     public int Benefits;
 
+    // EXTENDED >>>>>>>>
+    public  String pasword;
+
 }

@@ -17,6 +17,7 @@ import models.UserModel;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.Callback;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -30,6 +31,11 @@ import retrofit2.http.Path;
  */
 public interface FakeDataService {
 ////////////////////////////call api service
+
+    // TODO: 12/12/2017  added for Testing TOKEN!
+    @POST("/login")
+    void basicLogin(Callback<UserModel> cb);
+
     @POST("IncomingCalls")
     Call<CallModel> createNewCall(@Body CallModel callModel);
 
