@@ -24,6 +24,7 @@ public class ProductModel {
     public int SupplierId;
     public SupplierModel Supplier;
     public List<Order_DetailsModel> Order_Details;
+    public int SellUnitPrice;
 
     public static void getProductFromServer() {
         FakeDataProvider provider = new FakeDataProvider();

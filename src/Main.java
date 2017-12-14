@@ -1,17 +1,12 @@
-import Forms.DialogueFirst;
-import Forms.FormMain;
+import Forms.DialogueCallsModel;
 import models.ErrorModel;
 import models.LogInViewModel;
-import models.UserModel;
 import network.FakeDataService;
-import network.LoginService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import sun.rmi.runtime.Log;
 import utility.ClientConfigs;
 import utility.ErrorUtils;
-import utility.ServiceGenerator;
 
 public class Main {
     private FakeDataService mTService;
@@ -21,11 +16,11 @@ public class Main {
 
 
         //FormMain main = new FormMain();
-        DialogueFirst dialogueFirst = new DialogueFirst();
-        //dialogueFirst.setVisible(true);
+        DialogueCallsModel dialogueCallsModel = new DialogueCallsModel();
+        //dialogueCallsModel.setVisible(true);
 
-        DialogueFirst.main();
-        //dialogueFirst.Init();
+        DialogueCallsModel.main();
+        //dialogueCallsModel.Init();
 
         System.out.println("Finished RUN");
 

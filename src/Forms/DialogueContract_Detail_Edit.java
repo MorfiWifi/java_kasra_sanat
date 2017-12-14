@@ -1,24 +1,17 @@
 package Forms;
 
-import models.CallModel;
-import models.LogInViewModel;
-
 import javax.swing.*;
 import java.awt.event.*;
 
-public class DialogueFirst extends JDialog {
-    private static DialogueFirst Dialogue;
+public class DialogueContract_Detail_Edit extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JProgressBar progressBar1;
-    private JList list1;
 
-    public DialogueFirst() {
+    public DialogueContract_Detail_Edit() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
-        //getRootPane().setSize(1500 , 900);
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -56,34 +49,5 @@ public class DialogueFirst extends JDialog {
     private void onCancel() {
         // add your code here if necessary
         dispose();
-    }
-
-    public static void main() {
-        if (Dialogue == null){
-            Dialogue = new DialogueFirst();
-        }
-
-        Dialogue.setSize(1500 , 900);
-        LogInViewModel logInViewModel = new LogInViewModel();
-        logInViewModel.setUserName("admin");
-        logInViewModel.setPassword("bbBB11!!");
-        LogInViewModel.LoginAsync(Dialogue.list1 , logInViewModel);
-        CallModel.getcallFromServer(Dialogue.list1);
-        Dialogue.pack();
-        Dialogue.setVisible(true);
-
-        //dialog.list1.add();
-        System.exit(0);
-    }
-
-    // Morfi INIT
-
-    public void Init (){
-        //DialogueFirst dialog = new DialogueFirst();
-        this.setSize(1500 , 900);
-        this.pack();
-        this.setVisible(true);
-        System.exit(0);
-
     }
 }
