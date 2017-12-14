@@ -21,9 +21,9 @@ public class CallModel {
     public int Id;
     public String Message;
     public Date Date;
-    private FakeDataService mTService;
+    private static FakeDataService mTService;
 
-    public void getcallFromServer(JList list) {
+    public static void getcallFromServer(JList list) {
         FakeDataProvider provider = new FakeDataProvider();
         mTService = provider.getTService();
         Call<List<CallModel>> call = mTService.getCalls();
@@ -41,9 +41,11 @@ public class CallModel {
                     //list.updateUI();
                     //mAdapter.updateAdapterData(response.body());
                     //mAdapter.notifyDataSetChanged();
+                    System.out.println("Recoved CallModels Successfully");
                 } else {
-                    ErrorModel errorModel = ErrorUtils.parseError(response);
-                    //Toast.makeText(getBaseContext(), "Error type is " + errorModel.Message + " , description " + errorModel.MessageDetail, Toast.LENGTH_SHORT).show();
+                    ErrorModel errorModel =ErrorUtils.parseError(response);
+                    System.out.println(errorModel.Message);
+                    //Toast.makeText(getBaseContext(), "Eror type is " + errorModel.Message + " , description " + errorModel.MessageDetail, Toast.LENGTH_SHORT).show();
                     // TODO: 12/11/2017  add Dialogue For Error
                 }
             }
@@ -52,9 +54,12 @@ public class CallModel {
             public void onFailure(Call<List<CallModel>> call, Throwable t) {
                 //occur when fail to deserialize || no network connection || server unavailable
                 //Toast.makeText(getBaseContext(), "Fail it >> " + t.getMessage(), Toast.LENGTH_LONG).show();
+                System.out.println("Serious Error in Call List CallModel");
                 // TODO: 12/11/2017  add Dialogue For Error
             }
         });
     }
+
+
 
 }

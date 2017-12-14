@@ -1,11 +1,13 @@
 package Forms;
 
 import models.CallModel;
+import models.LogInViewModel;
 
 import javax.swing.*;
 import java.awt.event.*;
 
 public class DialogueFirst extends JDialog {
+    private static DialogueFirst Dialogue;
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
@@ -56,13 +58,19 @@ public class DialogueFirst extends JDialog {
         dispose();
     }
 
-    public static void main(String[] args) {
-        DialogueFirst dialog = new DialogueFirst();
-        dialog.setSize(1500 , 900);
-        CallModel callModel = new CallModel();
-        callModel.getcallFromServer(dialog.list1);
-        dialog.pack();
-        dialog.setVisible(true);
+    public static void main() {
+        if (Dialogue == null){
+            Dialogue = new DialogueFirst();
+        }
+
+        Dialogue.setSize(1500 , 900);
+        LogInViewModel logInViewModel = new LogInViewModel();
+        logInViewModel.setUserName("admin");
+        logInViewModel.setPassword("bbBB11!!");
+        LogInViewModel.LoginAsync(Dialogue.list1 , logInViewModel);
+        CallModel.getcallFromServer(Dialogue.list1);
+        Dialogue.pack();
+        Dialogue.setVisible(true);
 
         //dialog.list1.add();
         System.exit(0);

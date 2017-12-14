@@ -165,10 +165,12 @@ public interface FakeDataService {
     Call<UserModel> deleteuserById(@Path("id") String Id);
 //////////////////////////////////////////////
 
-    @POST("Home")
+    @POST("token")
     Call<LogInViewModel> LogIn(@Body LogInViewModel logInViewModel);
 
-
+    //>> Extend Chck Getting Tokem as String
+    @POST("Users")
+    Call<String> LoginAsync(@Body LogInViewModel logInViewModel);
 
 
     @POST("signup")

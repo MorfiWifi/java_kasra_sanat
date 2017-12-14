@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Kasra_UNIX:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Kasra_UNIX_jar</output-path>
+    <root id="archive" name="Kasra_UNIX.jar">
+      <element id="module-output" name="Kasra_UNIX" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/gson-2.8.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/okio-1.13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/okhttp-3.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/retrofit-2.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jars/converter-gson-2.0.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
