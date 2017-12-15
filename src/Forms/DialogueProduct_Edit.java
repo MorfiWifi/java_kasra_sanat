@@ -1,9 +1,12 @@
 package Forms;
 
+import models.LogInViewModel;
+
 import javax.swing.*;
 import java.awt.event.*;
 
 public class DialogueProduct_Edit extends JDialog {
+    private static DialogueProduct_Edit Dialogue;
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
@@ -46,6 +49,23 @@ public class DialogueProduct_Edit extends JDialog {
         dispose();
     }
 
+    public static void main() {
+        if (Dialogue == null){
+            Dialogue = new DialogueProduct_Edit();
+        }
+
+        Dialogue.setSize(1500 , 900);
+        LogInViewModel logInViewModel = new LogInViewModel();
+        logInViewModel.setUserName("admin");
+        logInViewModel.setPassword("bbBB11!!");
+        //LogInViewModel.LoginAsync(Dialogue.list1 , logInViewModel);
+        //CallModel.getcallFromServer(Dialogue.list1);
+        Dialogue.pack();
+        Dialogue.setVisible(true);
+
+        //dialog.list1.add();
+        System.exit(0);
+    }
     private void onCancel() {
         // add your code here if necessary
         dispose();

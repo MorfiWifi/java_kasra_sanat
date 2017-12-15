@@ -1,4 +1,5 @@
 import Forms.DialogueCallsModel;
+import Forms.DialogueMainWindow;
 import models.ErrorModel;
 import models.LogInViewModel;
 import network.FakeDataService;
@@ -19,12 +20,13 @@ public class Main {
         DialogueCallsModel dialogueCallsModel = new DialogueCallsModel();
         //dialogueCallsModel.setVisible(true);
 
-        DialogueCallsModel.main();
+        DialogueMainWindow.main();
+        //DialogueCallsModel.main();
         //dialogueCallsModel.Init();
 
         System.out.println("Finished RUN");
 
-        Main nma = new Main();
+        //Main nma = new Main();
         LogInViewModel logInViewModel = new LogInViewModel();
         logInViewModel.setUserName("admin");
         logInViewModel.setPassword("bbBB11!!");

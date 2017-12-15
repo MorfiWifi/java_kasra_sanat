@@ -5,13 +5,13 @@ import models.LogInViewModel;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class DialogueContract_Detail_Edit extends JDialog {
-    private static DialogueContract_Detail_Edit Dialogue;
+public class DialogueAccountant extends JDialog {
+    private static DialogueAccountant Dialogue;
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
 
-    public DialogueContract_Detail_Edit() {
+    public DialogueAccountant() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -48,13 +48,12 @@ public class DialogueContract_Detail_Edit extends JDialog {
         // add your code here
         dispose();
     }
-
     public static void main() {
-        if (Dialogue == null){
-            Dialogue = new DialogueContract_Detail_Edit();
+        if (Dialogue == null) {
+            Dialogue = new DialogueAccountant();
         }
 
-        Dialogue.setSize(1500 , 900);
+        Dialogue.setSize(1500, 900);
         LogInViewModel logInViewModel = new LogInViewModel();
         logInViewModel.setUserName("admin");
         logInViewModel.setPassword("bbBB11!!");
@@ -62,11 +61,9 @@ public class DialogueContract_Detail_Edit extends JDialog {
         //CallModel.getcallFromServer(Dialogue.list1);
         Dialogue.pack();
         Dialogue.setVisible(true);
-
-        //dialog.list1.add();
-        System.exit(0);
     }
 
+        //dialog.list1.add();
 
     private void onCancel() {
         // add your code here if necessary

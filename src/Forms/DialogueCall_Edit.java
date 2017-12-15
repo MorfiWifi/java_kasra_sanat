@@ -1,17 +1,18 @@
 package Forms;
 
+import models.CallModel;
 import models.LogInViewModel;
 
 import javax.swing.*;
 import java.awt.event.*;
 
-public class DialogueContract_Detail_Edit extends JDialog {
-    private static DialogueContract_Detail_Edit Dialogue;
+public class DialogueCall_Edit extends JDialog {
+    private static DialogueCall_Edit Dialogue;
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
 
-    public DialogueContract_Detail_Edit() {
+    public DialogueCall_Edit() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -51,7 +52,7 @@ public class DialogueContract_Detail_Edit extends JDialog {
 
     public static void main() {
         if (Dialogue == null){
-            Dialogue = new DialogueContract_Detail_Edit();
+            Dialogue = new DialogueCall_Edit();
         }
 
         Dialogue.setSize(1500 , 900);
@@ -66,7 +67,6 @@ public class DialogueContract_Detail_Edit extends JDialog {
         //dialog.list1.add();
         System.exit(0);
     }
-
 
     private void onCancel() {
         // add your code here if necessary
