@@ -1,15 +1,13 @@
 package models;
 
-import com.sun.xml.internal.bind.v2.TODO;
-import network.FakeDataProvider;
-import network.FakeDataService;
+import network.RetrofitDataProvider;
+import network.RetrofitDataService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import utility.ErrorUtils;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.Date;
 import java.util.List;
 
@@ -21,12 +19,13 @@ public class CallModel {
     public int Id;
     public String Message;
     public Date Date;
-    private static FakeDataService mTService;
+    private static RetrofitDataService mTService;
 
     public static void getcallFromServer(JList list) {
-        FakeDataProvider provider = new FakeDataProvider();
+        RetrofitDataProvider provider = new RetrofitDataProvider();
         mTService = provider.getTService();
-        Call<List<CallModel>> call = mTService.getCalls();
+        Call<List<CallModel>> call = mTService.getCalls(TokenModel.TokenSTR);
+        //TempFill_Model.GetCurrentToken().Value
         call.enqueue(new Callback<List<CallModel>>() {
             @Override
             public void onResponse(Call<List<CallModel>> call, Response<List<CallModel>> response) {
@@ -60,6 +59,36 @@ public class CallModel {
         });
     }
 
+    public static void getToken (){
+        RetrofitDataProvider provider = new RetrofitDataProvider();
+        mTService = provider.getTService();
+
+        LogInViewModel logInViewModel = new LogInViewModel();
+        logInViewModel.setUserName("admin");
+        logInViewModel.setPassword("bbBB11!!");
+
+        Call<String> call = mTService.getToken(logInViewModel);
+
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+
+                if (response.isSuccessful()){
+
+
+                    System.out.println("Token Good : "+ response.body());
+                }else {
+
+                    System.out.println("Minor Error in Token!!");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable throwable) {
+                System.out.println("Serious Error in Togen!");
+            }
+        });
+    }
 
 
 }

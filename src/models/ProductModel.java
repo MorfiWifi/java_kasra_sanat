@@ -1,12 +1,12 @@
 package models;
 
 
-import network.FakeDataProvider;
-import network.FakeDataService;
+import network.RetrofitDataProvider;
+import network.RetrofitDataService;
 import utility.ErrorUtils;
 
 import java.util.List;
-import models.*;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -20,14 +20,14 @@ public class ProductModel {
     public String Name;
     public int UnitPrice;
     public int UnitsInStock;
-    private FakeDataService mTService;
+    private RetrofitDataService mTService;
     public int SupplierId;
     public SupplierModel Supplier;
     public List<Order_DetailsModel> Order_Details;
     public int SellUnitPrice;
 
     public static void getProductFromServer() {
-        FakeDataProvider provider = new FakeDataProvider();
+        RetrofitDataProvider provider = new RetrofitDataProvider();
         ProductModel pm  = new ProductModel();
         pm.mTService = provider.getTService();
         Call<List<ProductModel>> call = pm.mTService.getProduct();

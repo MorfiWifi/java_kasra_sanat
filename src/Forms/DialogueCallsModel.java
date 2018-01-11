@@ -2,6 +2,7 @@ package Forms;
 
 import models.CallModel;
 import models.LogInViewModel;
+import models.TokenModel;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -64,11 +65,26 @@ public class DialogueCallsModel extends JDialog {
         }
 
         Dialogue.setSize(1500 , 900);
-        LogInViewModel logInViewModel = new LogInViewModel();
-        logInViewModel.setUserName("admin");
-        logInViewModel.setPassword("bbBB11!!");
-        LogInViewModel.LoginAsync(Dialogue.list1 , logInViewModel);
+       // LogInViewModel logInViewModel = new LogInViewModel();
+       // logInViewModel.setUserName("admin");
+       // logInViewModel.setPassword("bbBB11!!");
+       // LogInViewModel.LoginAsync(Dialogue.list1 , logInViewModel);
+
+        // >>> CHOOSE WHAT TO DO ?!??
+        //CallModel.getToken();
+        TokenModel.getToken();
+        while   (TokenModel.TokenSTR.length() < 2) {
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
         CallModel.getcallFromServer(Dialogue.list1);
+
+
+
         Dialogue.pack();
         Dialogue.setVisible(true);
 

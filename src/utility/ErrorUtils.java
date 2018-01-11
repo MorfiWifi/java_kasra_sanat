@@ -1,7 +1,7 @@
 package utility;
 
 import models.ErrorModel;
-import network.FakeDataProvider;
+import network.RetrofitDataProvider;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
@@ -16,10 +16,10 @@ import retrofit2.Response;
 public class ErrorUtils {
 
     public static ErrorModel parseError(Response<?> response) {
-        FakeDataProvider fakeDataProvider = new FakeDataProvider();
+        RetrofitDataProvider retrofitDataProvider = new RetrofitDataProvider();
 
         //using Converter for convert error response body into Error Model
-        Converter<ResponseBody, ErrorModel> converter = fakeDataProvider.getRetrofitClient().responseBodyConverter(ErrorModel.class, new Annotation[0]);
+        Converter<ResponseBody, ErrorModel> converter = retrofitDataProvider.getRetrofitClient().responseBodyConverter(ErrorModel.class, new Annotation[0]);
 
         ErrorModel errorModel;
 

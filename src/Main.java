@@ -2,22 +2,25 @@ import Forms.DialogueCallsModel;
 import Forms.DialogueMainWindow;
 import models.ErrorModel;
 import models.LogInViewModel;
-import network.FakeDataService;
+import network.RetrofitDataService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import utility.ClientConfigs;
 import utility.ErrorUtils;
+import utility.Init;
 
 public class Main {
-    private FakeDataService mTService;
+    private RetrofitDataService mTService;
+    public static  String Token;
 
     public static void main(String[] args) {
         System.out.println("Now Current Base URL is : " + ClientConfigs.REST_API_BASE_URL);
 
+        Init.Pront_mark();
 
         //FormMain main = new FormMain();
-        DialogueCallsModel dialogueCallsModel = new DialogueCallsModel();
+        //DialogueCallsModel dialogueCallsModel = new DialogueCallsModel();
         //dialogueCallsModel.setVisible(true);
 
         DialogueMainWindow.main();

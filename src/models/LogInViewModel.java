@@ -1,14 +1,13 @@
 package models;
 
-import network.FakeDataProvider;
-import network.FakeDataService;
+import network.RetrofitDataProvider;
+import network.RetrofitDataService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import utility.ErrorUtils;
 
 import javax.swing.*;
-import java.util.List;
 
 /**
  * Created by WifiMorfi on 12/9/2017.
@@ -17,7 +16,7 @@ import java.util.List;
 public class LogInViewModel {
     String UserName;
     String Password;
-    private static FakeDataService mTService;
+    private static RetrofitDataService mTService;
 
     public void setPassword(String password) {
         Password = password;
@@ -38,7 +37,7 @@ public class LogInViewModel {
 
 
     public static void LoginAsync(JList list , LogInViewModel logInViewModel) {
-        FakeDataProvider provider = new FakeDataProvider();
+        RetrofitDataProvider provider = new RetrofitDataProvider();
         mTService = provider.getTService();
         Call<String> call = mTService.LoginAsync(logInViewModel);
         call.enqueue(new Callback<String>() {

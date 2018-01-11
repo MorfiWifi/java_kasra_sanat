@@ -9,4 +9,12 @@ import java.util.List;
 public class TempFill_Model {
     List list;
     boolean res;
+    private static TokenModel tokenModel;
+
+    public static TokenModel GetCurrentToken() {
+        if (tokenModel == null){
+            tokenModel = new TokenModel();
+        }
+        return tokenModel;
+    }
 }

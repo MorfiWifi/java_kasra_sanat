@@ -36,11 +36,16 @@ public interface RetrofitDataService {
     @POST("/login")
     void basicLogin(Callback<UserModel> cb);
 
+    //>>> TEst Token in Call Model!!!
+    @POST("Token")
+    Call<String> getToken ( @Body LogInViewModel logInViewModel);
+
     @POST("IncomingCalls")
     Call<CallModel> createNewCall(@Body CallModel callModel);
 
     @GET("IncomingCalls")
-      Call<List<CallModel>> getCalls();
+     // Call<List<CallModel>> getCalls();
+    Call<List<CallModel>> getCalls(@Header("Authorization") String Tokenscr);
 //    public void getCalls (Callback<List<CallModel>> respons);
 
     @GET("IncomingCalls/{id}")
