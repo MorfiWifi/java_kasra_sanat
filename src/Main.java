@@ -18,6 +18,8 @@ public class Main {
         System.out.println("Now Current Base URL is : " + ClientConfigs.REST_API_BASE_URL);
 
         Init.Pront_mark();
+        System.out.println("Internet in Connected : "+Init.CheckInternet());
+
 
         //FormMain main = new FormMain();
         //DialogueCallsModel dialogueCallsModel = new DialogueCallsModel();
@@ -30,9 +32,9 @@ public class Main {
         System.out.println("Finished RUN");
 
         //Main nma = new Main();
-        LogInViewModel logInViewModel = new LogInViewModel();
-        logInViewModel.setUserName("admin");
-        logInViewModel.setPassword("bbBB11!!");
+        //LogInViewModel logInViewModel = new LogInViewModel();
+        //logInViewModel.setUserName("admin");
+        //logInViewModel.setPassword("bbBB11!!");
 
         //nma.Login(logInViewModel);
 

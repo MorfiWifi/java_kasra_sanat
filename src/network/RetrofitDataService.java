@@ -188,3 +188,4 @@ public interface RetrofitDataService {
     //Call<OperationResultModel> terminateApp(@Header("Authorization") String authHeader);
 
 }
+

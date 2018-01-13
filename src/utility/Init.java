@@ -1,5 +1,8 @@
 package utility;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 /**
  * Created by WifiMorfi on 12/20/2017.
  */
@@ -21,4 +24,26 @@ public class Init {
         System.out.println("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
     }
     public  static  String Token = "";
+    public static boolean CheckInternet (){
+        try {
+            try {
+                URL url = new URL("http://www.google.com");
+                //System.out.println(url.getHost());
+                HttpURLConnection con = (HttpURLConnection) url
+                        .openConnection();
+                con.connect();
+                if (con.getResponseCode() == 200){
+                    return true;
+                    //System.out.println("Connection established!!");
+                }
+            } catch (Exception exception) {
+                return false;
+                //System.out.println("No Connection");
+            }
+        } catch (Exception e) {
+            return false;
+            //e.printStackTrace();
+        }
+        return false;
+    }
 }
