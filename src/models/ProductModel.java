@@ -30,7 +30,7 @@ public class ProductModel {
         RetrofitDataProvider provider = new RetrofitDataProvider();
         ProductModel pm  = new ProductModel();
         pm.mTService = provider.getTService();
-        Call<List<ProductModel>> call = pm.mTService.getProduct();
+        Call<List<ProductModel>> call = pm.mTService.getProduct(TokenModel.TokenSTR);
         call.enqueue(new Callback<List<ProductModel>>() {
             TempFill_Model temp = new TempFill_Model();
             @Override

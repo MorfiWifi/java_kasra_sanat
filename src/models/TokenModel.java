@@ -13,6 +13,7 @@ import java.util.Date;
  * Token Model used in sign in, sign up and refresh token response
  */
 public class TokenModel {
+    public final static String bad = "BADTOKEN";
     private static RetrofitDataService mTService;
     public String access_token;
   //  public Long expire_in_sec;
@@ -42,14 +43,53 @@ public class TokenModel {
                     System.out.println("Token Good : "+ response.body());
                 }else {
 
+                    TokenSTR = bad;
                     System.out.println("Minor Error in Token!!");
                 }
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable throwable) {
+                TokenSTR = bad;
                 System.out.println("Serious Error in Togen!");
             }
         });
+        WaitForToken();
+    }
+    public static boolean isTokenGood (){
+        if (TokenSTR.equals(bad)){
+            return false;
+        }
+        if (TokenSTR.equals("")){
+            return false;
+        }
+        return true;
+
+    }
+    public static boolean isTokenEmpty () {
+        if (TokenSTR.equals("")){
+            return true;
+        }
+        return false;
+    }
+    public static boolean isTokenBad (){
+        if (TokenSTR.equals(bad)){
+            return true;
+        }
+        if (TokenSTR.equals("")){
+            return true;
+        }
+        return false;
+    }
+    public static void  WaitForToken (){
+        while (TokenModel.isTokenEmpty()){
+            if (TokenModel.isTokenEmpty()){
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }

@@ -64,7 +64,7 @@ public class Main {
 
     }
 
-    private void Login (LogInViewModel logInViewModel) {
+    /*private void Login (LogInViewModel logInViewModel) {
         Call login = mTService.LogIn(logInViewModel);
         login.enqueue(new Callback<LogInViewModel>() {
             @Override
@@ -89,5 +89,5 @@ public class Main {
 
 
         });
-    }
+    }*/
 }

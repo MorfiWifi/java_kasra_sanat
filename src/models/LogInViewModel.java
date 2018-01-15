@@ -35,7 +35,7 @@ public class LogInViewModel {
     }
 
 
-
+/*
     public static void LoginAsync(JList list , LogInViewModel logInViewModel) {
         RetrofitDataProvider provider = new RetrofitDataProvider();
         mTService = provider.getTService();
@@ -73,5 +73,5 @@ public class LogInViewModel {
 
 
         });
-    }
+    }*/
 }

@@ -1,5 +1,6 @@
 package models;
 
+import jdk.nashorn.internal.ir.WhileNode;
 import network.RetrofitDataProvider;
 import network.RetrofitDataService;
 import retrofit2.Call;
@@ -22,6 +23,13 @@ public class CallModel {
     private static RetrofitDataService mTService;
 
     public static void getcallFromServer(JList list) {
+        if (TokenModel.isTokenBad()){
+            TokenModel.getToken();
+        }
+
+
+
+
         RetrofitDataProvider provider = new RetrofitDataProvider();
         mTService = provider.getTService();
         Call<List<CallModel>> call = mTService.getCalls(TokenModel.TokenSTR);
@@ -59,7 +67,7 @@ public class CallModel {
         });
     }
 
-    public static void getToken (){
+    /*public static void getToken (){
         RetrofitDataProvider provider = new RetrofitDataProvider();
         mTService = provider.getTService();
 
@@ -88,7 +96,7 @@ public class CallModel {
                 System.out.println("Serious Error in Togen!");
             }
         });
-    }
+    }*/
 
 
 }
