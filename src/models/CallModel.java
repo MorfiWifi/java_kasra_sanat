@@ -1,5 +1,6 @@
 package models;
 
+import com.sun.xml.internal.bind.v2.TODO;
 import jdk.nashorn.internal.ir.WhileNode;
 import network.RetrofitDataProvider;
 import network.RetrofitDataService;
@@ -9,6 +10,7 @@ import retrofit2.Response;
 import utility.ErrorUtils;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -22,11 +24,17 @@ public class CallModel {
     public Date Date;
     private static RetrofitDataService mTService;
 
-    public static void getcallFromServer(JList list) {
+    public static ArrayList<CallModel> list = new ArrayList<CallModel>();
+    public static void getcallFromServer(JList list , ArrayList<CallModel> List) {
+        //List = new ArrayList<>();
         if (TokenModel.isTokenBad()){
             TokenModel.getToken();
         }
 
+        if (TokenModel.isTokenBad()){
+            // TODO: 1/15/2018  Break Token is Broken!
+        }
+        //if (TokenModel.)
 
 
 
@@ -38,9 +46,12 @@ public class CallModel {
             @Override
             public void onResponse(Call<List<CallModel>> call, Response<List<CallModel>> response) {
                 if (response.isSuccessful()) {
+                    //List = new ArrayList<CallModel>();
+                    List.clear();
                     //update the adapter data
                     DefaultListModel demoList = new DefaultListModel();
                     for (int i = 0; i < response.body().size(); i++) {
+                        List.add(response.body().get(i));
                         demoList.addElement(response.body().get(i).Message + " : " + response.body().get(i).Date);
                     }
 

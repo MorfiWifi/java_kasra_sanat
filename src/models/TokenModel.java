@@ -82,14 +82,13 @@ public class TokenModel {
         return false;
     }
     public static void  WaitForToken (){
-        while (TokenModel.isTokenEmpty()){
             if (TokenModel.isTokenEmpty()){
                 try {
                     Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }
+
         }
     }
 }

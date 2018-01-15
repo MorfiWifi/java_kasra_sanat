@@ -81,7 +81,7 @@ public class DialogueCallsModel extends JDialog {
             }
         }
 
-        CallModel.getcallFromServer(Dialogue.list1);
+        CallModel.getcallFromServer(Dialogue.list1 , CallModel.list);
 
 
 
@@ -89,7 +89,7 @@ public class DialogueCallsModel extends JDialog {
         Dialogue.setVisible(true);
 
         //dialog.list1.add();
-        System.exit(0);
+       // System.exit(0);
     }
 
     // Morfi INIT
@@ -99,7 +99,7 @@ public class DialogueCallsModel extends JDialog {
         this.setSize(1500 , 900);
         this.pack();
         this.setVisible(true);
-        System.exit(0);
+        //System.exit(0);
 
     }
 }
