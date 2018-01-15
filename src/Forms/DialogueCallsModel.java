@@ -13,7 +13,8 @@ public class DialogueCallsModel extends JDialog {
     private JButton buttonOK;
     private JButton buttonCancel;
     private JProgressBar progressBar1;
-    private JList list1;
+    public JList list1;
+
 
     public DialogueCallsModel() {
         setContentPane(contentPane);
@@ -47,6 +48,8 @@ public class DialogueCallsModel extends JDialog {
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
+
     }
 
     private void onOK() {
@@ -80,6 +83,21 @@ public class DialogueCallsModel extends JDialog {
                 e.printStackTrace();
             }
         }
+
+        Dialogue.list1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JList jList = (JList)e.getSource();
+                if (e.getClickCount() == 2){
+                    int index = jList.locationToIndex(e.getPoint());
+                    // TODO: 1/15/2018  Edit method in This Model
+                    DialogueCall_Edit.main(CallModel.list.get(index) , Dialogue);
+
+
+                }
+                super.mouseClicked(e);
+            }
+        });
 
         CallModel.getcallFromServer(Dialogue.list1 , CallModel.list);
 

@@ -36,8 +36,6 @@ public class CallModel {
         }
         //if (TokenModel.)
 
-
-
         RetrofitDataProvider provider = new RetrofitDataProvider();
         mTService = provider.getTService();
         Call<List<CallModel>> call = mTService.getCalls(TokenModel.TokenSTR);
@@ -77,37 +75,65 @@ public class CallModel {
             }
         });
     }
-
-    /*public static void getToken (){
+    public static void Edit_CallModel (CallModel callModel , JList list , ArrayList<CallModel> List){
+        if (TokenModel.isTokenBad()){
+            TokenModel.getToken();
+        }
+        if (TokenModel.isTokenBad()){
+            // TODO: 1/15/2018  Some Real ERROR
+        }
         RetrofitDataProvider provider = new RetrofitDataProvider();
         mTService = provider.getTService();
-
-        LogInViewModel logInViewModel = new LogInViewModel();
-        logInViewModel.setUserName("admin");
-        logInViewModel.setPassword("bbBB11!!");
-
-        Call<String> call = mTService.getToken(logInViewModel);
-
-        call.enqueue(new Callback<String>() {
+        Call<CallModel> call = mTService.updateCallById(TokenModel.TokenSTR , String.valueOf(callModel.Id), callModel);
+        call.enqueue(new Callback<CallModel>() {
             @Override
-            public void onResponse(Call<String> call, Response<String> response) {
-
+            public void onResponse(Call<CallModel> call, Response<CallModel> response) {
                 if (response.isSuccessful()){
 
-
-                    System.out.println("Token Good : "+ response.body());
+                    System.out.println("Success Edit Call Model");
+                    getcallFromServer(list , List);
                 }else {
-
-                    System.out.println("Minor Error in Token!!");
+                    System.out.println("mid err in Edit Call Model");
                 }
+
             }
 
             @Override
-            public void onFailure(Call<String> call, Throwable throwable) {
-                System.out.println("Serious Error in Togen!");
+            public void onFailure(Call<CallModel> call, Throwable throwable) {
+                System.out.println(throwable.getMessage());
+
             }
         });
-    }*/
+    }
+    public static void Remove_CallMOdel(CallModel callModel , JList list , ArrayList<CallModel> List){
+        if (TokenModel.isTokenBad()){
+            TokenModel.getToken();
+        }
+        if (TokenModel.isTokenBad()){
+            // TODO: 1/15/2018  Some Real ERROR
+        }
+        Call<CallModel> call = mTService.deleteCallById(TokenModel.TokenSTR , String.valueOf(callModel.Id));
+        call.enqueue(new Callback<CallModel>() {
+            @Override
+            public void onResponse(Call<CallModel> call, Response<CallModel> response) {
+                if (response.isSuccessful()){
+
+                    System.out.println("Success del Call Model");
+                    getcallFromServer(list , List);
+                }else {
+                    System.out.println("mid err in delet Call Model");
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<CallModel> call, Throwable throwable) {
+                System.out.println(throwable.getMessage());
+
+            }
+        });
+    }
+
 
 
 }

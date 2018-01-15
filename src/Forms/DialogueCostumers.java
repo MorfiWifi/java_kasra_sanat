@@ -10,6 +10,7 @@ public class DialogueCostumers extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JList list1;
 
     public DialogueCostumers() {
         setContentPane(contentPane);
@@ -54,11 +55,24 @@ public class DialogueCostumers extends JDialog {
         }
 
         Dialogue.setSize(1500 , 900);
-        LogInViewModel logInViewModel = new LogInViewModel();
-        logInViewModel.setUserName("admin");
-        logInViewModel.setPassword("bbBB11!!");
         //LogInViewModel.LoginAsync(Dialogue.list1 , logInViewModel);
         //CallModel.getcallFromServer(Dialogue.list1);
+
+        Dialogue.list1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JList jList = (JList)e.getSource();
+                if (e.getClickCount() == 2){
+                    int index = jList.locationToIndex(e.getPoint());
+                    // TODO: 1/15/2018  Edit method in This Model
+
+
+
+                }
+                super.mouseClicked(e);
+            }
+        });
+
         Dialogue.pack();
         Dialogue.setVisible(true);
 

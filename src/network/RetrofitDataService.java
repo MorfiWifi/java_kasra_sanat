@@ -54,7 +54,7 @@ public interface RetrofitDataService {
     @PUT("IncomingCalls2/{id}")
     Call<CallModel> updateCallById(@Header("Authorization") String Tokenscr ,@Path("id") String callId, @Body CallModel callModel);
 
-    @DELETE("tIncomingCalls2/{id}")
+    @DELETE("IncomingCalls2/{id}")
     Call<CallModel> deleteCallById(@Header("Authorization") String Tokenscr ,@Path("id") String Id);
 //////////////////////////////////////////////
 ////////////////////////////costumer api service

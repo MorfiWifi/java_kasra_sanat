@@ -11,10 +11,10 @@ public class TempFill_Model {
     boolean res;
     private static TokenModel tokenModel;
 
-    public static TokenModel GetCurrentToken() {
+    /*public static TokenModel GetCurrentToken() {
         if (tokenModel == null){
             tokenModel = new TokenModel();
         }
         return tokenModel;
-    }
+    }*/
 }

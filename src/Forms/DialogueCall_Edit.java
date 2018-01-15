@@ -11,6 +11,12 @@ public class DialogueCall_Edit extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JTextField textMessage;
+    private JLabel lableID;
+    private JLabel lableDate;
+    private JButton buttRemove;
+    public DialogueCallsModel paprent;
+    private CallModel callModel;
 
     public DialogueCall_Edit() {
         setContentPane(contentPane);
@@ -43,11 +49,41 @@ public class DialogueCall_Edit extends JDialog {
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+        buttRemove.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onRemove();
+            }
+        });
     }
 
     private void onOK() {
         // add your code here
+        if (textMessage.getText().trim().length() > 1){
+            callModel.Message = textMessage.getText();
+            CallModel.Edit_CallModel(callModel , paprent.list1 , CallModel.list);
+        }
+
+
+
+
         dispose();
+    }
+
+    private void onRemove() {
+        // add your code here
+        if (textMessage.getText().trim().length() > 1){
+            callModel.Message = textMessage.getText();
+            CallModel.Remove_CallMOdel(callModel , paprent.list1 , CallModel.list);
+        }
+
+        dispose();
+    }
+
+    public void fill_Edit (CallModel callModel){
+        lableID.setText(String.valueOf(callModel.Id));
+        lableDate.setText(String.valueOf(callModel.Date));
+        textMessage.setText(callModel.Message);
     }
 
     public static void main() {
@@ -56,16 +92,37 @@ public class DialogueCall_Edit extends JDialog {
         }
 
         Dialogue.setSize(1500 , 900);
-        LogInViewModel logInViewModel = new LogInViewModel();
-        logInViewModel.setUserName("admin");
-        logInViewModel.setPassword("bbBB11!!");
+
+
+
         //LogInViewModel.LoginAsync(Dialogue.list1 , logInViewModel);
         //CallModel.getcallFromServer(Dialogue.list1);
         Dialogue.pack();
         Dialogue.setVisible(true);
 
         //dialog.list1.add();
-        System.exit(0);
+        //System.exit(0);
+    }
+
+    public static void main( CallModel callModel , DialogueCallsModel paprent) {
+        if (Dialogue == null){
+            Dialogue = new DialogueCall_Edit();
+        }
+
+        Dialogue.setSize(1500 , 900);
+
+        Dialogue.paprent = paprent;
+        Dialogue.callModel = callModel;
+
+
+        //LogInViewModel.LoginAsync(Dialogue.list1 , logInViewModel);
+        //CallModel.getcallFromServer(Dialogue.list1);
+        Dialogue.fill_Edit(callModel);
+        Dialogue.pack();
+        Dialogue.setVisible(true);
+
+        //dialog.list1.add();
+        //System.exit(0);
     }
 
     private void onCancel() {

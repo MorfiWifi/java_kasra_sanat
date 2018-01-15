@@ -1,7 +1,9 @@
 package test;
 
 
+import models.TokenModel;
 import org.junit.Test;
+import utility.Init;
 
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -9,31 +11,22 @@ import static org.testng.AssertJUnit.assertEquals;
  * Created by WifiMorfi on 1/13/2018.
  */
 public class maintest {
-    @Test
-    public  void kill(){
-
-        //return true;
-    }
 
     @Test
-    public void kill2(){
+    public void InternetConnect(){
+        assertEquals("Connectivity" , true , Init.CheckInternet());
+    }
+
+    @Test
+    public void Token(){
 
 
-        assertEquals("TEST 1 - KILLER 2" ,false, tru(2));
-        //assertEquals(0, tester.multiply(0, 10), "0 x 10 must be 0");
-        //assertEquals(0, tester.multiply(0, 0), "0 x 0 must be 0");
+        TokenModel.getToken("lablavb" , "ladsadasda");
 
-
-
-        //assert true;
-
-        //return  false;
-
+        assertEquals("Check tokrn" , false , TokenModel.isTokenGood());
 
     }
 
-    public boolean tru(int x){
-        return true;
-    }
+
 
 }
