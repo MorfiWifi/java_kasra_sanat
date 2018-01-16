@@ -127,7 +127,7 @@ public class TokenModel {
         return false;
     }
     public static void  WaitForToken (){
-            if (TokenModel.isTokenEmpty()){
+            while (TokenModel.isTokenEmpty()){
                 try {
                     Thread.sleep(10);
                 } catch (InterruptedException e) {

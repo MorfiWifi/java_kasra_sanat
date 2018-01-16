@@ -121,6 +121,7 @@ public class DialogueMainWindow extends JDialog {
         Dialogue.setSize(1500 , 900);
         //LogInViewModel.LoginAsync(Dialogue.list1 , logInViewModel);
         //CallModel.getcallFromServer(Dialogue.list1);
+        Login.main();
 
 
         Dialogue.pack();

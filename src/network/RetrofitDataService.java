@@ -44,7 +44,6 @@ public interface RetrofitDataService {
     Call<CallModel> createNewCall(@Header("Authorization") String Tokenscr , @Body CallModel callModel);
 
     @GET("IncomingCalls2")
-     // Call<List<CallModel>> getCalls();
     Call<List<CallModel>> getCalls(@Header("Authorization") String Tokenscr);
 //    public void getCalls (Callback<List<CallModel>> respons);
 

@@ -1,4 +1,5 @@
 import Forms.DialogueCallsModel;
+import Forms.DialogueLogin;
 import Forms.DialogueMainWindow;
 import models.ErrorModel;
 import models.LogInViewModel;
@@ -21,9 +22,12 @@ public class Main {
         System.out.println("Internet in Connected : "+Init.CheckInternet());
 
 
-        //FormMain main = new FormMain();
+        //DialogueLogin main = new DialogueLogin();
         //DialogueCallsModel dialogueCallsModel = new DialogueCallsModel();
         //dialogueCallsModel.setVisible(true);
+
+        DialogueLogin dialogueLogin = new DialogueLogin();
+
 
         DialogueMainWindow.main();
         //DialogueCallsModel.main();

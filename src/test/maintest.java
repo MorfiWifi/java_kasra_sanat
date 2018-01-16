@@ -20,10 +20,10 @@ public class maintest {
     @Test
     public void Token(){
 
-
         TokenModel.getToken("lablavb" , "ladsadasda");
-
         assertEquals("Check tokrn" , false , TokenModel.isTokenGood());
+        TokenModel.TokenSTR = "sadaqmk_213dcamkcla";
+        assertEquals("check Token" , true , TokenModel.isTokenGood());
 
     }
 
