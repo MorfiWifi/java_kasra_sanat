@@ -4,6 +4,7 @@ import models.CallModel;
 import models.LogInViewModel;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class DialogueCall_Edit extends JDialog {
@@ -119,6 +120,12 @@ public class DialogueCall_Edit extends JDialog {
         //CallModel.getcallFromServer(Dialogue.list1);
         Dialogue.fill_Edit(callModel);
         Dialogue.pack();
+        Dialogue.setSize(400 , 150);
+        final Toolkit toolkit = Toolkit.getDefaultToolkit();
+        final Dimension screenSize = toolkit.getScreenSize();
+        final int x = (screenSize.width - Dialogue.getWidth()) / 2;
+        final int y = (screenSize.height - Dialogue.getHeight()) / 2;
+        Dialogue.setLocation(x, y);
         Dialogue.setVisible(true);
 
         //dialog.list1.add();

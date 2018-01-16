@@ -4,6 +4,7 @@ import models.TokenModel;
 import utility.Init;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class Login extends JDialog {
@@ -91,6 +92,12 @@ public class Login extends JDialog {
     public static void main() {
         Login dialog = new Login();
         dialog.pack();
+        dialog.setSize(400 , 150);
+        final Toolkit toolkit = Toolkit.getDefaultToolkit();
+        final Dimension screenSize = toolkit.getScreenSize();
+        final int x = (screenSize.width - dialog.getWidth()) / 2;
+        final int y = (screenSize.height - dialog.getHeight()) / 2;
+        dialog.setLocation(x, y);
         dialog.setVisible(true);
         //System.exit(0);
     }

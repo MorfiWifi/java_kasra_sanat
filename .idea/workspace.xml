@@ -57,28 +57,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RetrofitDataService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/network/RetrofitDataService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientConfigs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utility/ClientConfigs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DialogueLogin.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Forms/DialogueLogin.form">
           <provider selected="true" editor-type-id="ui-designer">
@@ -98,15 +76,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TokenModel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TokenModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/TokenModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="85" column="47" lean-forward="true" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+            <state relative-caret-position="358">
+              <caret line="103" column="41" lean-forward="true" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getToken#0;class#TokenModel#0" expanded="false" />
-                <element signature="method#isTokenGood#0;class#TokenModel#0" expanded="false" />
                 <element signature="method#isTokenEmpty#0;class#TokenModel#0" expanded="false" />
                 <element signature="method#isTokenBad#0;class#TokenModel#0" expanded="false" />
                 <element signature="method#WaitForToken#0;class#TokenModel#0" expanded="false" />
@@ -122,11 +99,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="maintest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/maintest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Forms/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="63" column="30" lean-forward="true" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+            <state relative-caret-position="460">
+              <caret line="94" column="8" lean-forward="false" selection-start-line="94" selection-start-column="8" selection-end-line="99" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -135,36 +122,41 @@
       <file leaf-file-name="DialogueMainWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Forms/DialogueMainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="123" column="21" lean-forward="true" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
+            <state relative-caret-position="103">
+              <caret line="116" column="31" lean-forward="true" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DialogueLogin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Forms/DialogueLogin.java">
+      <file leaf-file-name="DialogueCallsModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Forms/DialogueCallsModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="392">
+              <caret line="107" column="34" lean-forward="false" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
               <folding>
-                <element signature="e#696#697#0" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CallModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/CallModel.java">
+      <file leaf-file-name="DialogueCall_Edit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Forms/DialogueCall_Edit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-              <folding>
-                <element signature="e#752#763#0" expanded="true" />
-                <element signature="method#Edit_CallModel#0;class#CallModel#0" expanded="false" />
-                <element signature="method#Remove_CallMOdel#0;class#CallModel#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="443">
+              <caret line="127" column="35" lean-forward="false" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DialogueProducts.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Forms/DialogueProducts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -234,11 +226,7 @@
         <option value="$PROJECT_DIR$/src/Forms/DialogueCostumers.java" />
         <option value="$PROJECT_DIR$/src/Forms/DialogueOrders.java" />
         <option value="$PROJECT_DIR$/src/Forms/DialogueProducers.java" />
-        <option value="$PROJECT_DIR$/src/Forms/DialogueProducts.java" />
         <option value="$PROJECT_DIR$/src/Forms/DialogueCall_Edit.form" />
-        <option value="$PROJECT_DIR$/src/Forms/DialogueCallsModel.java" />
-        <option value="$PROJECT_DIR$/src/Forms/DialogueCall_Edit.java" />
-        <option value="$PROJECT_DIR$/src/test/maintest.java" />
         <option value="$PROJECT_DIR$/src/network/RetrofitDataService.java" />
         <option value="$PROJECT_DIR$/src/models/ContractModel.java" />
         <option value="$PROJECT_DIR$/src/models/CallModel.java" />
@@ -247,9 +235,13 @@
         <option value="$PROJECT_DIR$/src/Forms/DialogueLogin.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Forms/Login.form" />
-        <option value="$PROJECT_DIR$/src/Forms/Login.java" />
-        <option value="$PROJECT_DIR$/src/Forms/DialogueMainWindow.java" />
         <option value="$PROJECT_DIR$/src/models/TokenModel.java" />
+        <option value="$PROJECT_DIR$/src/Forms/Login.java" />
+        <option value="$PROJECT_DIR$/src/Forms/DialogueCallsModel.java" />
+        <option value="$PROJECT_DIR$/src/Forms/DialogueCall_Edit.java" />
+        <option value="$PROJECT_DIR$/src/Forms/DialogueProducts.java" />
+        <option value="$PROJECT_DIR$/src/Forms/DialogueMainWindow.java" />
+        <option value="$PROJECT_DIR$/src/test/maintest.java" />
       </list>
     </option>
   </component>
@@ -1147,8 +1139,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.maintest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.maintest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.maintest.kill2" />
         <item index="3" class="java.lang.String" itemvalue="Application.DialogueCallsModel" />
       </list>
@@ -1182,7 +1174,7 @@
       <workItem from="1515685628271" duration="613000" />
       <workItem from="1515840414350" duration="2087000" />
       <workItem from="1515845228720" duration="5939000" />
-      <workItem from="1515907870630" duration="31762000" />
+      <workItem from="1515907870630" duration="32807000" />
     </task>
     <task id="LOCAL-00001" summary="-first not Fully Fixed">
       <created>1513007704665</created>
@@ -1251,12 +1243,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="maintest - 2018.01.13 at 14h 57m 54s.xml">
-      <configuration name="maintest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="maintest - 2018.01.13 at 14h 58m 06s.xml">
-      <configuration name="maintest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="maintest - 2018.01.15 at 20h 40m 35s.xml">
       <configuration name="maintest" configurationId="JUnit" />
     </history-entry>
@@ -1278,12 +1264,18 @@
     <history-entry file="maintest - 2018.01.15 at 21h 59m 28s.xml">
       <configuration name="maintest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="maintest - 2018.01.16 at 08h 57m 31s.xml">
+      <configuration name="maintest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="maintest - 2018.01.16 at 08h 59m 27s.xml">
+      <configuration name="maintest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="maintest_kill2 - 2018.01.13 at 15h 37m 35s.xml">
       <configuration name="maintest.kill2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112209000" />
+    <option name="totallyTimeSpent" value="113254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -1685,56 +1677,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Forms/DialogueProducts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="65" column="51" lean-forward="true" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
-          <folding>
-            <element signature="e#1836#2247#0" expanded="true" />
-            <element signature="e#2246#2247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Forms/DialogueCall_Edit.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Forms/DialogueCall_Edit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="76" column="31" lean-forward="true" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
-          <folding>
-            <element signature="e#1126#1254#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
-            <element signature="e#1745#1746#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/maintest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Forms/DialogueCallsModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2444#2936#0" expanded="true" />
-            <element signature="e#2935#2936#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/ContractModel.java">
@@ -1796,17 +1741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Forms/DialogueLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
@@ -1822,39 +1756,83 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Forms/DialogueMainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="123" column="21" lean-forward="true" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Forms/Login.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Forms/DialogueLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Forms/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="63" column="30" lean-forward="true" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+        <state relative-caret-position="460">
+          <caret line="94" column="8" lean-forward="false" selection-start-line="94" selection-start-column="8" selection-end-line="99" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Forms/DialogueCallsModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="107" column="34" lean-forward="false" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Forms/DialogueCall_Edit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="127" column="35" lean-forward="false" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Forms/DialogueProducts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Forms/DialogueMainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="116" column="31" lean-forward="true" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/TokenModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="85" column="47" lean-forward="true" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+        <state relative-caret-position="358">
+          <caret line="103" column="41" lean-forward="true" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getToken#0;class#TokenModel#0" expanded="false" />
-            <element signature="method#isTokenGood#0;class#TokenModel#0" expanded="false" />
             <element signature="method#isTokenEmpty#0;class#TokenModel#0" expanded="false" />
             <element signature="method#isTokenBad#0;class#TokenModel#0" expanded="false" />
             <element signature="method#WaitForToken#0;class#TokenModel#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/maintest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

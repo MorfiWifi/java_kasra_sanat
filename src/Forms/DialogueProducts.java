@@ -4,6 +4,7 @@ import models.LogInViewModel;
 import models.ProductModel;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class DialogueProducts extends JDialog {
@@ -78,6 +79,12 @@ public class DialogueProducts extends JDialog {
         ProductModel.getProductFromServer(Dialogue.list1 , ProductModel.lis);
 
         Dialogue.pack();
+        Dialogue.setSize(400 , 400);
+        final Toolkit toolkit = Toolkit.getDefaultToolkit();
+        final Dimension screenSize = toolkit.getScreenSize();
+        final int x = (screenSize.width - Dialogue.getWidth()) / 2;
+        final int y = (screenSize.height - Dialogue.getHeight()) / 2;
+        Dialogue.setLocation(x, y);
         Dialogue.setVisible(true);
 
 

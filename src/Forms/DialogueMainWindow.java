@@ -1,6 +1,7 @@
 package Forms;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class DialogueMainWindow extends JDialog {
@@ -125,6 +126,12 @@ public class DialogueMainWindow extends JDialog {
 
 
         Dialogue.pack();
+        Dialogue.setSize(300 , 300);
+        final Toolkit toolkit = Toolkit.getDefaultToolkit();
+        final Dimension screenSize = toolkit.getScreenSize();
+        final int x = (screenSize.width - Dialogue.getWidth()) / 2;
+        final int y = (screenSize.height - Dialogue.getHeight()) / 2;
+        Dialogue.setLocation(x, y);
         Dialogue.setVisible(true);
         //dialog.list1.add();
         System.exit(0);

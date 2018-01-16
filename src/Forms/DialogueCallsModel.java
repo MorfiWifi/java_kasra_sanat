@@ -5,6 +5,7 @@ import models.LogInViewModel;
 import models.TokenModel;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class DialogueCallsModel extends JDialog {
@@ -104,6 +105,12 @@ public class DialogueCallsModel extends JDialog {
 
 
         Dialogue.pack();
+        Dialogue.setSize(400 , 400);
+        final Toolkit toolkit = Toolkit.getDefaultToolkit();
+        final Dimension screenSize = toolkit.getScreenSize();
+        final int x = (screenSize.width - Dialogue.getWidth()) / 2;
+        final int y = (screenSize.height - Dialogue.getHeight()) / 2;
+        Dialogue.setLocation(x, y);
         Dialogue.setVisible(true);
 
         //dialog.list1.add();
@@ -116,6 +123,7 @@ public class DialogueCallsModel extends JDialog {
         //DialogueCallsModel dialog = new DialogueCallsModel();
         this.setSize(1500 , 900);
         this.pack();
+
         this.setVisible(true);
         //System.exit(0);
 

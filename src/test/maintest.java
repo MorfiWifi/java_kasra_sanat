@@ -20,6 +20,7 @@ public class maintest {
     @Test
     public void Token(){
 
+        TokenModel.TokenSTR  = "";
         TokenModel.getToken("lablavb" , "ladsadasda");
         assertEquals("Check tokrn" , false , TokenModel.isTokenGood());
         TokenModel.TokenSTR = "sadaqmk_213dcamkcla";
@@ -27,6 +28,12 @@ public class maintest {
 
     }
 
+    @Test
+    public void Token2(){
+        TokenModel.TokenSTR  = "";
+        TokenModel.getToken("admin" , "bbBB11!!");
+        assertEquals("Check tokrn" , true , TokenModel.isTokenGood());
 
+    }
 
 }
